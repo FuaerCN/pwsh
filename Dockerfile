@@ -8,7 +8,7 @@ RUN apt-get update -y \
     && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ bionic main" | tee /etc/apt/sources.list.d/azure-cli.list \
     && apt-get update -y \
     && apt-get install -y powershell azure-cli \
-	&& wget -qO /usr/bin/ttyd https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.x86_64 \
+    && wget -qO /usr/bin/ttyd https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.x86_64 \
     && chmod +x /usr/bin/ttyd
 
 WORKDIR /home
