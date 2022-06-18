@@ -14,4 +14,4 @@ RUN apt-get update -y \
 WORKDIR /home
 RUN pwsh -c "Install-Module -Scope AllUsers AzureAD,MSOnline,PnP.PowerShell -Force"
 
-CMD ttyd -p 8080 -t titleFixed=PowerShell pwsh
+CMD ttyd -p $PORT -t titleFixed=PowerShell pwsh
